@@ -18,12 +18,13 @@ public final class R {
         public static final int icon_close=0x7f020004;
         public static final int icon_share=0x7f020005;
         public static final int image_corner_view=0x7f020006;
-        public static final int list_corner_view=0x7f020007;
-        public static final int main_corner_view=0x7f020008;
-        public static final int none_corner_view=0x7f020009;
-        public static final int pink_corner_view=0x7f02000a;
-        public static final int purple_corner_view=0x7f02000b;
-        public static final int white_corner_view=0x7f02000c;
+        public static final int image_icon=0x7f020007;
+        public static final int list_corner_view=0x7f020008;
+        public static final int main_corner_view=0x7f020009;
+        public static final int none_corner_view=0x7f02000a;
+        public static final int pink_corner_view=0x7f02000b;
+        public static final int purple_corner_view=0x7f02000c;
+        public static final int white_corner_view=0x7f02000d;
     }
     public static final class id {
         public static final int editorEditText1=0x7f060000;

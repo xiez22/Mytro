@@ -2,8 +2,8 @@
 <manifest
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	package="com.ligongzzz.mytro"
-	android:versionCode="1"
-	android:versionName="1.0">
+	android:versionCode="2"
+	android:versionName="1.1">
 
 	<uses-sdk
 		android:minSdkVersion="14"
@@ -11,7 +11,7 @@
 
 	<application
 		android:allowBackup="true"
-		android:icon="@drawable/ic_launcher"
+		android:icon="@drawable/image_icon"
 		android:label="@string/app_name"
 		android:theme="@style/AppTheme"
 		android:resizeableActivity="true">
