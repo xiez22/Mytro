@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="#FFFFFF"
+		android:elevation="3dp">
+
+		<Button
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="保存"
+			android:background="#FFFFFF"
+			android:textStyle="bold"
+			android:textColor="#57D4C2"
+			android:onClick="onClickEditorSub2Save"/>
+
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<EditText
+				android:layout_width="match_parent"
+				android:ems="10"
+				android:layout_height="wrap_content"
+				android:hint="车站名"
+				android:layout_weight="0.89"
+				android:id="@+id/editorsub2EditText1"/>
+
+			<Button
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="新增"
+				android:layout_weight="1.0"
+				android:onClick="onClickEditorSub2Add"/>
+
+			<Button
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="删除"
+				android:textColor="#A60900"
+				android:layout_weight="1.0"
+				android:onClick="onClickEditorSub2Delete"/>
+
+			<Button
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="应用"
+				android:layout_weight="1.0"
+				android:textColor="#57D4C2"
+				android:onClick="onClickEditorSub2Apply"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="车站x坐标(米)"
+				android:layout_weight="1"
+				android:layout_marginLeft="10dp"/>
+
+			<EditText
+				android:layout_width="match_parent"
+				android:ems="10"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:id="@+id/editorsub2EditText2"/>
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="车站y坐标(米)"
+				android:layout_weight="1.0"
+				android:layout_marginLeft="10dp"/>
+
+			<EditText
+				android:layout_width="match_parent"
+				android:ems="10"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:id="@+id/editorsub2EditText3"/>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+	<ListView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="#FEFEFE"
+		android:id="@+id/editorsub2ListView1"/>
+
+</LinearLayout>
+

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="match_parent"
+	android:layout_width="match_parent"
+	android:id="@+id/sub2RelativeLayout2">
+
+	<LinearLayout
+		android:layout_height="match_parent"
+		android:layout_width="match_parent"
+		android:orientation="vertical"
+		android:id="@+id/sub2LinearLayout1">
+
+		<LinearLayout
+			android:layout_height="60dp"
+			android:layout_width="match_parent"
+			android:orientation="horizontal"
+			android:background="#5555FF"
+			android:elevation="3dp">
+
+			<ImageButton
+				style="?android:attr/buttonBarButtonStyle"
+				android:layout_height="match_parent"
+				android:layout_width="wrap_content"
+				android:src="@drawable/icon_back"
+				android:layout_marginTop="0dp"
+				android:layout_marginBottom="0dp"
+				android:adjustViewBounds="true"
+				android:paddingBottom="13dp"
+				android:paddingTop="13dp"
+				android:maxHeight="20dp"
+				android:cropToPadding="true"
+				android:scaleType="fitCenter"
+				android:onClick="onClickSub2ButtonBack"/>
+
+			<TextView
+				android:layout_height="wrap_content"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="wrap_content"
+				android:text="Mytro线路查询"
+				android:gravity="center_vertical"
+				android:layout_gravity="center_vertical"
+				android:textStyle="bold"
+				android:textColor="#FFFFFF"
+				android:textSize="18sp"/>
+
+			<LinearLayout
+				android:layout_height="match_parent"
+				android:layout_width="match_parent"
+				android:orientation="vertical"
+				android:layout_gravity="center"
+				android:gravity="center">
+
+				<ImageButton
+					style="?android:attr/buttonBarButtonStyle"
+					android:layout_height="match_parent"
+					android:layout_width="wrap_content"
+					android:src="@drawable/icon_share"
+					android:layout_gravity="right|center"
+					android:onClick="onClickSub2ButtonShare"
+					android:adjustViewBounds="true"
+					android:minHeight="20dp"
+					android:scaleType="fitCenter"
+					android:paddingBottom="15dp"
+					android:paddingTop="15dp"/>
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:orientation="horizontal"
+			android:background="#FFFFFF"
+			android:elevation="3dp">
+
+			<Button
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:text="线路列表"
+				android:background="#FFFFFF"
+				android:textColor="#0F60F7"
+				android:textStyle="bold"
+				android:onClick="onClickSub2ButtonMap"
+				android:layout_weight="1.0"
+				android:elevation="0dp"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:orientation="horizontal"
+			android:layout_marginTop="10dp">
+
+			<EditText
+				android:layout_height="match_parent"
+				android:layout_width="wrap_content"
+				android:ems="10"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="0dp"
+				android:layout_weight="1.0"
+				android:id="@+id/sub2EditText1"
+				android:hint="起始站"
+				android:singleLine="true"
+				android:layout_marginTop="5dp"
+				android:layout_marginBottom="5dp"
+				android:background="@drawable/white_corner_view"
+				android:elevation="3dp"
+				android:textSize="16sp"/>
+
+			<Spinner
+				android:layout_height="40dp"
+				android:layout_width="100dp"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
+				android:id="@+id/sub2Spinner1"
+				android:elevation="3dp"
+				android:layout_marginBottom="5dp"
+				android:layout_marginTop="5dp"
+				android:background="#F3F3F3"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:orientation="horizontal"
+			android:layout_marginTop="0dp">
+
+			<EditText
+				android:layout_height="match_parent"
+				android:layout_width="wrap_content"
+				android:ems="10"
+				android:layout_marginLeft="10dp"
+				android:layout_weight="1.0"
+				android:id="@+id/sub2EditText2"
+				android:hint="到达站"
+				android:singleLine="true"
+				android:layout_marginTop="5dp"
+				android:layout_marginBottom="5dp"
+				android:background="@drawable/white_corner_view"
+				android:elevation="3dp"
+				android:textSize="16sp"/>
+
+			<Spinner
+				android:layout_height="40dp"
+				android:layout_width="100dp"
+				android:layout_marginRight="10dp"
+				android:layout_marginLeft="10dp"
+				android:id="@+id/sub2Spinner2"
+				android:elevation="3dp"
+				android:layout_marginTop="5dp"
+				android:layout_marginBottom="5dp"
+				android:background="#F3F3F3"/>
+
+		</LinearLayout>
+
+		<Button
+			android:layout_height="50dp"
+			android:layout_width="match_parent"
+			android:text="查询线路"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:layout_marginTop="10dp"
+			android:textColor="#FFFFFF"
+			android:onClick="onSub2Button1Click"
+			android:background="@drawable/purple_corner_view"/>
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:text="线路的查询结果将会显示在这里。"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:layout_marginTop="10dp"
+			android:id="@+id/sub2TextView1"/>
+
+		<ListView
+			android:layout_width="match_parent"
+			android:layout_marginBottom="27dp"
+			android:id="@+id/sub2ListView1"
+			android:divider="#8A8A8A"
+			android:layout_height="wrap_content"
+			android:dividerHeight="1dp"
+			android:background="@drawable/list_corner_view"
+			android:elevation="3dp"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"/>
+
+		<LinearLayout
+			android:layout_height="match_parent"
+			android:layout_width="match_parent"
+			android:orientation="vertical"
+			android:gravity="bottom">
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:layout_width="wrap_content"
+		android:text="©2018 ligongzzz"
+		android:layout_alignParentBottom="true"
+		android:gravity="center"
+		android:layout_centerHorizontal="true"
+		android:textSize="10sp"
+		android:layout_marginBottom="7dp"
+		android:id="@+id/sub2TextView2"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="关于"
+		android:layout_alignParentBottom="true"
+		android:layout_toRightOf="@id/sub2TextView2"
+		android:layout_marginBottom="7dp"
+		android:textSize="10sp"
+		android:gravity="center"
+		android:layout_marginLeft="5dp"
+		android:textColor="#3B43E4"
+		android:onClick="onClickSub2Text"/>
+
+</RelativeLayout>
+

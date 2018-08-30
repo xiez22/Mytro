@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="#FFFFFF"
+		android:elevation="3dp">
+
+		<Button
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="保存"
+			android:background="#FFFFFF"
+			android:textStyle="bold"
+			android:textColor="#57D4C2"
+			android:onClick="onClickEditorSub3Save"/>
+
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:text="选择一个车站"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_gravity="center"
+				android:gravity="center"
+				android:layout_weight="0.8"
+				android:textStyle="bold"
+				android:id="@+id/editorsub3TextView1"/>
+
+			<Button
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="删除车站"
+				android:textColor="#A60900"
+				android:layout_weight="1.0"
+				android:onClick="onClickEditorSub3Delete"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:text="需要添加的站"
+				android:layout_marginLeft="10dp"
+				android:gravity="center"
+				android:layout_weight="0.9"/>
+
+			<View
+				android:background="?android:attr/dividerHorizontal"
+				android:layout_width="1dp"
+				android:layout_height="match_parent"/>
+
+			<Spinner
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.7"
+				android:id="@+id/editorsub3Spinner1"
+				android:layout_margin="5dp"
+				android:background="@drawable/white_corner_view"/>
+
+			<View
+				android:background="?android:attr/dividerHorizontal"
+				android:layout_width="1dp"
+				android:layout_height="match_parent"/>
+
+			<Button
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:text="添加到该站前"
+				android:layout_weight="0.8"
+				android:textColor="#57D4C2"
+				android:onClick="onClickEditorSub3Add"/>
+
+			<Button
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:text="添加到该站后"
+				android:layout_weight="0.8"
+				android:textColor="#57D4C2"
+				android:onClick="onClickEditorSub3AddBehind"/>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+	<ListView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="#FEFEFE"
+		android:id="@+id/editorsub3ListView1"/>
+
+</LinearLayout>
+

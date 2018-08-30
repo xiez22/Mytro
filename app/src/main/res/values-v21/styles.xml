@@ -1,5 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AppTheme" parent="@android:style/Theme.Material.Light">
+	<style name="AppTheme" parent="@android:style/Theme.Material.Light">
+		<item name="android:colorPrimary">#57d4c2</item>
+		<item name="android:colorPrimaryDark">#57d4c2</item>
+	</style>
+	<style name="MAINTheme" parent="@android:style/Theme.Material.Light.DarkActionBar">
+	  	<item name="android:colorPrimary">#ff2033</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:colorPrimaryDark">#d22b3f</item>
+
+		<item name="android:colorAccent">#FF0000</item> 
+		<item name="android:colorButtonNormal">#ffffff</item>
+
+	</style>
+	<style name="NewMAINTheme" parent="@android:style/Theme.Material.Light.DarkActionBar">
+	  	<item name="android:colorPrimary">#ffffff</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:colorPrimaryDark">#ffffff</item>
+
+		<item name="android:colorAccent">#FF0000</item> 
+		<item name="android:colorButtonNormal">#ffffff</item>
+
+	</style>
+	<style name="HiTheme" parent="@android:style/Theme.Material.Light.DarkActionBar">
+	  	<item name="android:colorPrimary">#000000</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:colorPrimaryDark">#000000</item>
+
+		<item name="android:colorAccent">#FF0000</item> 
+		<item name="android:colorButtonNormal">#ffffff</item>
+
+	</style>
+	<style name="MetroTheme" parent="@android:style/Theme.Material.Light.DarkActionBar">
+	  	<item name="android:colorPrimary">#5555ff</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:colorPrimaryDark">#5555ff</item>
+
+		<item name="android:colorAccent">#aaaaaa</item> 
+		<item name="android:colorButtonNormal">#6666ff</item>
+
+	</style>
+	<style name="MapTheme" parent="@android:style/Theme.Material.Light.DarkActionBar">
+	  	<item name="android:colorPrimary">#5555ff</item>
+		<item name="android:colorPrimaryDark">#5555ff</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:colorAccent">#aaaaaa</item> 
+		<item name="android:colorButtonNormal">#6666ff</item>
+
+	</style>
+	<style name="GalleryTheme" parent="@android:style/Theme.Material.Light.DarkActionBar">
+	  	<item name="android:colorPrimary">#000000</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:colorPrimaryDark">#000000</item>
+        <item name="android:windowFullscreen">true</item>
+		<item name="android:colorAccent">#FF0000</item> 
+		<item name="android:colorButtonNormal">#ffffff</item>
+
 	</style>
 </resources>

@@ -1,11 +1,61 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center">
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content">
 
-    <TextView
-        android:text="@string/hello_world"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
 
-</LinearLayout>
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="#FFFFFF"
+			android:elevation="3dp">
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="Mytro，自定义你的Metro线路"
+				android:textColor="#4CC2B4"
+				android:textStyle="bold"
+				android:textSize="16sp"
+				android:layout_marginTop="20dp"
+				android:layout_marginBottom="20dp"
+				android:layout_marginLeft="10dp"/>
+
+		</LinearLayout>
+
+		<Button
+			android:layout_width="match_parent"
+			android:layout_height="100dp"
+			android:text="Mytro查询"
+			android:onClick="onClickButton1"
+			android:layout_marginTop="20dp"
+			android:background="#FFFFFF"/>
+
+		<Button
+			android:layout_width="match_parent"
+			android:layout_height="100dp"
+			android:text="Mytro编辑器"
+			android:onClick="onClickButton2"
+			android:background="#FFFFFF"
+			android:layout_marginTop="10dp"/>
+
+	</LinearLayout>
+
+	<Button
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="关于"
+		android:layout_alignParentBottom="true"
+		android:background="#57D4C2"
+		android:textColor="#FFFFFF"
+		android:elevation="10dp"
+		android:onClick="onClickButtonAbout"/>
+
+</RelativeLayout>
+
