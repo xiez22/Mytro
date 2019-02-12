@@ -118,12 +118,24 @@ public class MainActivity extends Activity
 			AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 			builder.setTitle("关于Mytro");
 			builder.setMessage("Mytro V1.2\nMytro线路查询与编辑器由@ligongzzz开发，如果您有任何问题或建议，请联系作者:\n邮箱:xiezhe20001128@sjtu.edu.cn\nGitHub:github.com/ligongzzz");
-			builder.setPositiveButton("好", new DialogInterface.OnClickListener() {
+			builder.setPositiveButton("GitHub", new DialogInterface.OnClickListener() {
 
 					@Override
 					public void onClick(DialogInterface p1, int p2)
 					{
 						// TODO: Implement this method
+						Uri uri = Uri.parse("https://github.com/ligongzzz/Mytro");
+						Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+						startActivity(intent);
+					}
+				});
+			builder.setNegativeButton("OK", new DialogInterface.OnClickListener() {
+
+					@Override
+					public void onClick(DialogInterface p1, int p2)
+					{
+						// TODO: Implement this method
+						
 					}
 				});
 
