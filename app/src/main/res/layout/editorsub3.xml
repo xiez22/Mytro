@@ -29,7 +29,7 @@
 			<TextView
 				android:layout_width="match_parent"
 				android:layout_height="match_parent"
-				android:text="选择一个车站"
+				android:text="选择当前车站"
 				android:textAppearance="?android:attr/textAppearanceLarge"
 				android:layout_gravity="center"
 				android:gravity="center"

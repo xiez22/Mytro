@@ -13,6 +13,7 @@ import com.ligongzzz.mytro.Tool.*;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.*;
 import android.content.pm.*;
+import android.net.*;
 
 public class MainActivity extends Activity 
 {
@@ -42,6 +43,14 @@ public class MainActivity extends Activity
 			startActivity(intent);
 		}
 	}
+	
+	public void onClickButton3(View view)
+	{
+		Uri uri = Uri.parse("https://github.com/ligongzzz/Mytro/blob/master/tips.md");
+    	Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+		startActivity(intent);
+	}
+	
 	
 	public void onClickButtonAbout(View view)
 	{
@@ -108,7 +117,7 @@ public class MainActivity extends Activity
 		{
 			AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 			builder.setTitle("关于Mytro");
-			builder.setMessage("Mytro V1.0\nMytro线路查询与编辑器由@ligongzzz开发，如果您有任何问题或建议，请联系作者:\n邮箱:xiezhe20001128@sjtu.edu.cn\nGitHub:github.com/ligongzzz");
+			builder.setMessage("Mytro V1.2\nMytro线路查询与编辑器由@ligongzzz开发，如果您有任何问题或建议，请联系作者:\n邮箱:xiezhe20001128@sjtu.edu.cn\nGitHub:github.com/ligongzzz");
 			builder.setPositiveButton("好", new DialogInterface.OnClickListener() {
 
 					@Override

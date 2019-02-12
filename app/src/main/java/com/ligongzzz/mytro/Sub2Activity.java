@@ -428,7 +428,7 @@ class SecretDialogFragment extends DialogFragment
 	{
 		AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 		builder.setTitle("关于地铁查询");
-		builder.setMessage("地铁查询由作者本人独立开发，采用改进版的Dijkstra算法在极短的时间内获得最快路线。地图中所有数据均根据中国城地图实际站点位置采集。如有改进方案，请与作者联系:\n邮箱:xiezhe20001128@sjtu.edu.cn");
+		builder.setMessage("        地铁查询由作者本人独立开发，采用改进版的Dijkstra算法获得最快路径。本软件的全部源代码已上传GitHub。如有改进方案，请与作者联系:\n邮箱:xiezhe20001128@sjtu.edu.cn");
 		builder.setPositiveButton("好", new DialogInterface.OnClickListener() {
 
 				@Override

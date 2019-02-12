@@ -80,7 +80,7 @@ public class LineSearch
 			//写入ans集合
 			ans[1].st[0] = nslist[temp[temp[0]]].origin;
 			ans[1].wl[0] = 0;
-			ans[1].time = nslist[end].time + transferTime;
+			ans[1].time = nslist[end].time;// + transferTime;
 			for (int i=temp[0] - 1;i > 0;i--)
 			{
 				//判断是否改变了车站
@@ -130,6 +130,7 @@ public class LineSearch
 		return 0;
 	}
 
+	//Create New Station From Slist
 	public void dsearchnew(passenger[] ans, int start, int end)
 	{
 		for (int i=0;i <= slist[0].num;i++)
@@ -190,14 +191,19 @@ public class LineSearch
 			{
 				if (slist[nslist[i].origin].newsta[j] != i)
 				{
-					nslist[i].tunnelsta[++nslist[i].tunnelsta[0]] = slist[nslist[i].origin].newsta[j];
+					int curPos=slist[nslist[i].origin].newsta[j];
+					//int numSta=nslist[0].num;
+					nslist[i].tunnelsta[++nslist[i].tunnelsta[0]] = curPos;
 					nslist[i].tunneltime[nslist[i].tunnelsta[0]] = transferTime;
 					nslist[i].tunnelline[nslist[i].tunnelsta[0]] = -1;
 //特殊情况
-					if (start == nslist[i].origin || end == nslist[i].origin)
+					if (start == nslist[i].origin || end == nslist[i].origin||
+					nslist[i].line==nslist[curPos].line)
 					{
 						nslist[i].tunneltime[nslist[i].tunnelsta[0]] = 0.0;
 					}
+					//double lenTun=nslist[i].tunneltime[nslist[i].tunnelsta[0]];
+					//continue;
 				}
 			}
 		}

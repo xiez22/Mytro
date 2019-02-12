@@ -83,16 +83,24 @@ public class SubListActivity extends Activity
 					TextView textView3=(TextView)findViewById(R.id.sublistTextView3);
 
 					textView1.setText(linesearch.lineName[yyf]);
-					textView2.setText(linesearch.lineName[yyf]+"分为" + linesearch.destination[yyf][0] + "方向和" + linesearch.destination[yyf][1] + "方向");
+					textView2.setText(linesearch.lineName[yyf] + "分为" + linesearch.destination[yyf][0] + "方向和" + linesearch.destination[yyf][1] + "方向");
 					textView3.setText("以下是该线路的车站列表，点击车站可查看详情:");
 
 					//设置表
 					intenttype = 3;
 
+					//isCircle
+					station startsta=linesearch.slist[linesearch.line[yyf][1]];
+
 					for (int i=1,n=0;i <= linesearch.line[yyf][0];i++)
 					{
 						if (linesearch.line[yyf][i] != 0)
 						{
+							if (linesearch.slist[linesearch.line[yyf][i]].name.equals(startsta.name) && i != 1)
+							{
+								textView1.setText(linesearch.lineName[yyf] + "(环线)");
+								break;
+							}
 							alist.add(linesearch.slist[linesearch.line[yyf][i]].name + "站");
 							yyflist[n++] = linesearch.line[yyf][i];
 						}
@@ -111,20 +119,33 @@ public class SubListActivity extends Activity
 					TextView textView3=(TextView)findViewById(R.id.sublistTextView3);
 
 					textView1.setText(linesearch.slist[yyf].name + "站");
-					textView2.setText("共有" + linesearch.slist[yyf].sl[0] + "条线路经过" + linesearch.slist[yyf].name + "站，车站的水平坐标为(" + (int)linesearch.slist[yyf].sx + "," + (int)linesearch.slist[yyf].sy + ")");
 					textView3.setText("以下是该车站的线路列表，点击线路可查看详情:");
 
 					//设置表
 					intenttype = 2;
+					int realStaNum=0;
 
 					for (int i=1,n=0;i <= linesearch.slist[yyf].sl[0];i++)
 					{
 						if (linesearch.slist[yyf].sl[i] != 0)
-						{
-							alist.add(linesearch.lineName[linesearch.slist[yyf].sl[i]]);
-							yyflist[n++] = linesearch.slist[yyf].sl[i] ;
+						{   boolean flag=false;
+						    for (int j=1;j < i;j++)
+							{
+								if (linesearch.slist[yyf].sl[i] == linesearch.slist[yyf].sl[j])
+								{
+									flag = true;
+									break;
+								}
+							}
+						    if (!flag)
+							{
+								alist.add(linesearch.lineName[linesearch.slist[yyf].sl[i]]);
+								yyflist[n++] = linesearch.slist[yyf].sl[i] ;
+								realStaNum++;
+							}
 						}
 					}
+					textView2.setText("共有" + realStaNum + "条线路经过" + linesearch.slist[yyf].name + "站，车站的水平坐标为(" + (int)linesearch.slist[yyf].sx + "," + (int)linesearch.slist[yyf].sy + ")");
 					break;
 				}
 		}
